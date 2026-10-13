@@ -1,0 +1,151 @@
+/* Colors in one place: change these and the whole site updates */
+:root {
+  --dark: #064e3b;
+  --accent: #059669;
+  --accent-2: #14b8a6;
+  --bg: #f0fdf4;
+  --text: #1e293b;
+  --muted: #64748b;
+}
+
+/* Reset: remove the browser's default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling when clicking the menu links */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Header: gradient banner */
+header {
+  background: linear-gradient(135deg, var(--dark), var(--accent)); 
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+}
+
+header p {
+  margin: 10px 0 24px;
+  color: #d1fae5;
+}
+
+/* Menu links styled as pills */
+nav a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 16px;
+  margin: 4px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  transition: background 0.2s;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Centered content column */
+main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Sections: white boxes with a soft shadow */
+section {
+  background: #fff;
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+
+h2 {
+  color: var(--dark);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* Skills as colorful tags */
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills li {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Cards for courses and projects: lift slightly on hover */
+.card {
+  background: var(--bg);
+  border-left: 4px solid var(--accent);
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.12);
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.card p {
+  margin: 0;
+}
+
+.meta {
+  color: var(--muted);
+}
+
+a {
+  color: var(--accent);
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Phones: slightly smaller title */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+}
